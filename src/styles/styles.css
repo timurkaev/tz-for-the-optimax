@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    border-bottom: 1px solid rgba(0,0,0, .8);
+    background: rgba(0,0,0, .8);
+    position: -webkit-sticky;
+    position: sticky;
+    color: rgba(255, 255, 255, .8);
+    top: 0;
+}
+
+.navbar {
+    height: 40px;
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    width: 900px;
+    margin: auto;
+}
+
+.nav__block {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apple__icon {
+    font-size: 23px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.apple__icon:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav > ul {
+    list-style: none;
+    width: 350px;
+    justify-content: space-between;
+    display: flex;
+    font-size: 14px;
+}
+
+.nav > ul > li {
+    cursor: pointer;
+    color: rgba(255,255,255, .8);
+}
+
+.nav > ul > li:hover {
+    color: #FFFFFF;
+}
+
+.btn {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: rgba(255,255,255, .8);
+    cursor: pointer;
+    position: relative;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+}
+
+.product__amount-cart {
+    font-size: 10px;
+    background: #3a3aff;
+    color: #FFF;
+    padding: 2px;
+    border-radius: 6px;
+    position: absolute;
+    right: 1px;
+}
+
+.products__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px 0 rgba(34, 60, 80, 0.2);
+    transition: .8s;
+}
+.products__card:hover {
+    box-shadow: 0 2px 15px 0 rgba(34, 60, 80, 0.2);
+    transition: .8s;
+}
+
+.products__img-and-name {
+    display: flex;
+}
+
+.products__img-and-name > strong {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.products__img {
+    width: 140px;
+    background: no-repeat center/ cover;
+    cursor: zoom-in;
+}
+
+.products__btn {
+    border: none;
+    background: rgba(58, 58, 255, 1);
+    color: #fff;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .4s;
+}
+.products__btn:hover {
+    transition: .4s;
+    box-shadow: 0 0 2px 3px rgba(68, 167, 255, 0.8);
+}
+
+.products__btn:active {
+    box-shadow: 0 0 6px 3px rgba(68, 167, 255, 0.8), 0 0 12px 3px rgba(68, 167, 255, 0.8);
+    transition: .2s;
+}
+
+.products__btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.products__price {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: end;
+}
+
+.cart {
+    margin-top: 20px;
+}
+
+.cart > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.empty__cart {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.empty__cart > .empty__cart-icon {
+    font-size: 250px;
+    color: rgba(0,0,0, .2);
+}
+
+.empty__cart > strong {
+    font-size: 40px;
+    position: absolute;
+    color: rgba(0,0,0, .6);
+}
+
+.cart__item {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 10px;
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(0,0,0, .8);
+}
+
+.cart__item-img {
+    width: 80px;
+}
+
+.cart__item-buttons {
+    width: 100px;
+}
+
+.cart__item-buttons > button {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: 1px solid rgba(0,0,0, .8);
+    cursor: pointer;
+}
+
+.cart__item-price {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.cart__total-price {
+    background: #f5f5f5;
+    border-radius: 6px;
+    width: 350px;
+    height: 150px;
+    padding: 10px;
+}
+
+.cart__total-price > button {
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.cart__total-price > button:active {
+    opacity: .7;
+}
+
+.cart__total-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0077ed;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.cart__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.cart__form > label{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__form > label > input {
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.cart__form > button {
+    align-self: flex-start;
+}
