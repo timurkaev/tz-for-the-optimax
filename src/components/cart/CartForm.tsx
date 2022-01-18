@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import {IProducts} from '../App';
+import {read} from 'fs';
 
 interface ICartFormProps {
     cartItems: IProducts[]
@@ -10,6 +11,15 @@ const CartForm: React.FC<ICartFormProps> = ({cartItems, setCartItems}) => {
   const [name, setName] = React.useState('');
   const [price, setPrice] = React.useState('');
   const [amount, setAmount] = React.useState(1);
+  const [file, setFile] = React.useState();
+
+  const addFileHandler = (event: any) => {
+    const reader = new FileReader();
+    reader.onload = (ev: any) => {
+      setFile(ev.target.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
 
   const handleAddProduct = (e:React.SyntheticEvent) => {
     e.preventDefault();
@@ -18,6 +28,7 @@ const CartForm: React.FC<ICartFormProps> = ({cartItems, setCartItems}) => {
       id: Date.now(),
       name: name,
       price: Number(price),
+      image: file,
       amount: amount
     };
     if (name && price) {
@@ -38,6 +49,12 @@ const CartForm: React.FC<ICartFormProps> = ({cartItems, setCartItems}) => {
       <label>
         Amount
         <input onChange={(e) => setAmount(+e.target.value)} value={amount} type="number"/>
+      </label>
+      <label>
+        Load file:
+        <input
+          onChange={addFileHandler}
+          type="file" />
       </label>
       <button disabled={!name || !price} onClick={handleAddProduct}>Add to cart</button>
     </form>
