@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export const getProducts = (): Promise<any> => {
-  return axios.get('http://localhost:5000/products')
+  return axios.get('/products')
       .then(({data}) => data);
 };
