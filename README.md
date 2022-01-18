@@ -1,11 +1,8 @@
-###Install dependencies
+### Install dependencies
 
-````bash
-npm install or yarn install
-````
+`npm install` or `yarn install`
+
 
 ### Running
 
-````bash
-yarn dev or npm run dev 
-````
+`yarn dev` or `npm run dev` 
