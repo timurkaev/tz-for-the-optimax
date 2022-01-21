@@ -37,18 +37,18 @@ const CartForm: React.FC<ICartFormProps> = ({cartItems, setCartItems}) => {
   };
 
   return (
-    <form className="cart__form">
+    <form data-testid={'form'} className="cart__form">
       <label>
         Product name:
-        <input onChange={(e) => setName(e.target.value)} value={name} type="text"/>
+        <input data-testid={'name-input'} onChange={(e) => setName(e.target.value)} value={name} type="text"/>
       </label>
       <label>
         Price:
-        <input onChange={(e) => setPrice(e.target.value)} value={price} type="number"/>
+        <input data-testid={'price-input'} onChange={(e) => setPrice(e.target.value)} value={price} type="number"/>
       </label>
       <label>
         Amount
-        <input onChange={(e) => setAmount(+e.target.value)} value={amount} type="number"/>
+        <input data-testid={'amount-input'} onChange={(e) => setAmount(+e.target.value)} value={amount} type="number"/>
       </label>
       <label>
         Load file:
